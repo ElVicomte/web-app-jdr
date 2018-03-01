@@ -244,7 +244,7 @@ class Form
             $name = $field->getBaseName();
             $index = $field->getIndex();
 
-            if ($index === null) { 
+            if ($index === null) {
                 if ($present = isset($values[$name])) {
                     $value =& $values[$name];
                 }

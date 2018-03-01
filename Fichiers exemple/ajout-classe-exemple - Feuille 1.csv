@@ -1,0 +1,54 @@
+nouveau,classe,
+,nom,Guerrier du Turfu
+,description,"Depuis que la guerre fait rage, des héros de toutes races ont cherché à maitriser l’art du combat. Ceux qui y sont parvenu sont devenus des guerriers redoutables. Grâce à leur force, leurs aptitudes au commandement et leur grande connaissance des armes et armures, ces guerriers sont capables de causer des ravages dans des combats épiques. Cette maîtrise les pousse à endosser plusieurs rôles dans la bataille. En effet certains sont en première ligne, armés de leurs boucliers pour retenir les ennemis. D’autres préfèrent déchainer leur rage sur leurs adversaires en utilisant des armes destructrices."
+,sort,
+,nom,Charge
+,description,"Vous chargez un ennemi, ce qui lui inflige 50 points de dégâts physiques, l'enracine pendant 1 sec, puis réduit sa vitesse de déplacement de 50% pendant 6 sec."
+,sort,
+,nom,Brise-genou
+,description,"Mutile l’ennemi, lui inflige 105% points de dégâts physiques et réduit sa vitesse de déplacement de 50% pendant 15 sec."
+,sort,
+,nom,Exécution
+,description,Vous tentez d’achever un ennemi en lui infligeant 202% points de dégâts physiques et en consommant jusqu’à 10 point de rage en plus pour infliger jusqu’à (202% * 10 / 10) points de dégâts supplémentaires. Cette technique peut uniquement être utilisée contre les ennemis qui disposent de moins de 20% de leur maximum de points de vie.
+,sort,
+,nom,Volée de coups
+,description,"Assène une volée de coups à la cible, interrompt l’incantation en cours et empêche le lancement de tout sort de la même école pendant 4 sec."
+nouveau,classe,
+,nom,Chasseur
+,description,"Azeroth accueille un très large éventail de bêtes. Que vous exploriez Kalimdor ou encore la Pandarie, tous les types de créatures peuvent être trouvés. Certaines sont amicales, d'autres sont au contraire féroces et agressives. Par contre, elles ont toutes quelque chose en commun. Chaque créature partage un lien très spécial avec le Chasseur. Le Chasseur traque, apprivoise et tue toutes sortes d'animaux et de bêtes. Qu'ils s'en remettent aux arcs, aux arbalètes ou aux fusils, les Chasseurs considèrent leurs armes et leurs familiers comme leurs seuls vrais alliés."
+,sort,
+,nom,Tueur rapide
+,description,Précision augmente également les dégâts de vos coups critiques de 50% pendant toute sa durée.
+,sort,
+,nom,Fusée éclairante
+,description,Révèle les ennemis cachés ou invisibles dans la zone ciblée pendant 20 s.
+,sort,
+,nom,Coupure d'ailes
+,description,"Mutile la cible, ce qui réduit sa vitesse de déplacement de 50% pendant 15 sec."
+,sort,
+,nom,Flèches multiples
+,description,Tire plusieurs projectiles qui touchent votre cible actuelle et tous les ennemis à moins de 8 mètres. Inflige 100% points de dégâts physiques.
+nouveau,classe,
+,nom,Mage
+,description,"Les mages tiennent leur puissance spirituelle de la cité de Dalaran. Après la destruction du royaume par la Légion Ardente, et les nombreuses guerres qui ont tiraillé le monde, l'art des arcanes s'est dispersé dans de lointaines régions du monde. Mais cela sans perdre en puissance."
+,sort,
+,nom,Métamorphose
+,description,"Transforme l’ennemi en mouton et le force à errer dans les environs, stupéfié, pendant 50 sec. La victime ne peut entreprendre aucune action, mais elle se soigne très rapidement. Si elle subit des dégâts, l’effet est annulé. Limité à 1 cible."
+,sort,
+,nom,Explosion pyrotechnique
+,description,Lance un immense rocher embrasé qui inflige 1 points de dégâts de Feu.
+,sort,
+,nom,Déflagration des Arcanes
+,description,Frappe la cible avec de l’énergie et lui inflige (232.804% of Spell power) points de dégâts des Arcanes.
+,sort,
+,nom,Lenteur
+,description,Réduit la vitesse de déplacement de la cible de 50% pendant 15 sec.
+nouveau,classe,
+,nom,Joint de Culasse
+,description,"Un pièce authentique. Vous n'en trouverez d'autres aussi puissantes et étonnantes que celle-ci. Grand fan de tuning, si votre dada est d'ajouter des sièges baquet et des néons à votre Twingo, cette classe est spécialement faite pour vous"
+,sort,
+,nom,Surplus d'huile bouillante
+,description,"Envoie une importante quantité d'huile en ébullition sur la cible, ainsi qu'aux joueurs adjacents"
+,sort,
+,nom,Jantes 17 pouces
+,description,"Vous envoyez 4 jantes en composite Aluminium/Carbone, ce qui inflige 210% des dégâts de votre joint, et rebondit sur la première cible la plus proche lui infligeant 90% des dégâts initiaux"

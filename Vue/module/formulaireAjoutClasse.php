@@ -9,7 +9,7 @@
 		<h5>Associer à une race</h5>
 		<?php foreach($races as $r): ?>
 			<div>
-				<input type="checkbox" name="races[]" id="<?= $r['raceNom']; ?>" value="<?= $r['idString']; ?>">
+				<input type="checkbox" name="races[]" id="<?= $r['idString']; ?>" value="<?= $r['idString']; ?>">
 				<label for="<?= $r['idString']; ?>"><?= $r['raceNom']; ?></label>
 			</div>
 		<?php endforeach; ?>

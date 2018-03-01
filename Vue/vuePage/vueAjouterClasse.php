@@ -1,5 +1,6 @@
 <div class="row container-fluid">
 	<span class="col-lg-5">
+		<h5>Importer via CSV</h5>
 		<?= $donnees['formulaireCSV']; ?>
 		<h4>Ajouter une classe</h4>
 		<?= $donnees['formulaireGeneral']; ?>
@@ -8,27 +9,27 @@
 		<h3>Liste des classes existantes :</h3>
 		<ul class="list-group">
 		<?php
-		foreach ($donnees["classes"] as $d) { ?>
+		foreach ($donnees["classes"] as $c) { ?>
 			<!-- <?php
-				var_dump($d['idString']);
-				var_dump($d['classeNom']);
-				var_dump($d['classeDescription']);
-				var_dump($d['sortNom']);
-				var_dump($d['raceNom']);
+				var_dump($c['idString']);
+				var_dump($c['classeNom']);
+				var_dump($c['classeDescription']);
+				var_dump($c['sortNom']);
+				var_dump($c['raceNom']);
 			?> -->
-			<div class="list-group-item"> 
-				<div class="container" data-toggle="collapse" data-target="#<?= $d['idString']; ?>">
-					<h5><?= $d['classeNom']; ?></h5>
+			<div class="list-group-item">
+				<div class="container" data-toggle="collapse" data-target="#<?= $c['idString']; ?>">
+					<h5><?= $c['classeNom']; ?></h5>
 				</div>
-				<div class="collapse informations" id="<?= $d['idString']; ?>">
+				<div class="collapse informations" id="<?= $c['idString']; ?>">
 					<div class="info-description">
-						<?= $d['classeDescription']; ?>
+						<?= $c['classeDescription']; ?>
 					</div>
 					<div class="info-race">
-						
+
 					</div>
 					<div class="info-sorts">
-						
+
 					</div>
 				</div>
 			</div>

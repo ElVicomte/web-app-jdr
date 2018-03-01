@@ -29,10 +29,9 @@
 			$races = $this->raceObjet->getRaces();
 			$classes = $this->classeObjet->getClasses('all');
 
-			$event = "";
 			$vue = new Vue('Ajouter une classe', 'vueAjouterClasse');
 
-			$formCSV = new Gregwar\Formidable\Form('Vue/module/formulaireAjoutClasseCSV.php');
+			$formCSV = new Gregwar\Formidable\Form('Vue/module/formulaireImportCSV.php');
 			$formCSV->setLanguage(new Gregwar\Formidable\Language\French);
 
 			$formGeneral = new Gregwar\Formidable\Form('Vue/module/formulaireAjoutClasse.php', array('races' => $races));
@@ -66,7 +65,7 @@
 			$vue->generer(array("classes" => $classes, "formulaireGeneral" => $formGeneral, "formulaireCSV" => $formCSV, "evenement" => $this->event));
 		}
 
-		public function verifierFichier(){
+		public function verifierFichier(){ // Vérifie la correspondance du fichier et retourne si l'upload s'est fait
 			$fichierExtension = strtolower(pathinfo($this->fichier, PATHINFO_EXTENSION));
 			if($fichierExtension == "csv"){
 				if(move_uploaded_file($_FILES['import-csv']['tmp_name'], 'contenu/import/' . $this->fichier)){

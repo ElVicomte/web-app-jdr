@@ -7,7 +7,7 @@
 		public function __construct(){
 
 		}
-		
+
 		public function getClasses($complements = null){
 			// if(isset($complements)){
 				$sql = "
@@ -22,9 +22,9 @@
 			// 	return $res;
 			// }
 			// else{
-				$sql = "SELECT * FROM classe";
+				$sql = "SELECT * FROM classe ORDER BY classeNom";
 				$res = $this->executerRequete($sql);
-				return $res->fetchAll();	
+				return $res->fetchAll();
 			// }
 		}
 
@@ -43,7 +43,7 @@
 			$this->executerRequete($sql, array($idClasse, $last_id));
 
 			// Lie les races à la classe
-			if(isset($e['races'])){	
+			if(isset($e['races'])){
 				$races = array();
 				$sql = "SELECT idRace FROM race WHERE idString = ?";
 				foreach($e['races'] as $r){
@@ -52,7 +52,7 @@
 				$sql = "INSERT INTO liaison_race_classe (idRace, idClasse) VALUES (?, ?)";
 				foreach($races as $r){
 					$this->executerRequete($sql, array($r, $last_id));
-				} 
+				}
 			}
 
 			// Ajout des sorts
