@@ -37,13 +37,13 @@
 			$sql = "SELECT MAX(idClasse) as idClasse FROM classe";
 			$last_id = $this->executerRequete($sql)->fetchAll()[0][0];
 
-			//
+			// ID formulaire
 			$idClasse = strtolower(explode(' ', trim($e['classe-nom']))[0]) . '-' . $last_id;
 			$sql = "UPDATE classe SET idString = ? WHERE idClasse = ?";
 			$this->executerRequete($sql, array($idClasse, $last_id));
 
 			// Lie les races à la classe
-			if(isset($e['races'])){
+			if(!empty($e['races'])){
 				$races = array();
 				$sql = "SELECT idRace FROM race WHERE idString = ?";
 				foreach($e['races'] as $r){

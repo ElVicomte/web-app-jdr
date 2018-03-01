@@ -4,3 +4,10 @@
 .fas-menu{
 	float: right;
 }
+.fa-dropdown-list-class{
+  display: inline-block;
+}
+.titre-liste-classe{
+  display: inline;
+  padding-right: 8px;
+}

@@ -1,6 +1,6 @@
 <div class="row container-fluid">
 	<span class="col-lg-5">
-		<h5>Importer via CSV</h5>
+		<h4>Importer un CSV</h4>
 		<?= $donnees['formulaireCSV']; ?>
 		<h4>Ajouter une classe</h4>
 		<?= $donnees['formulaireGeneral']; ?>
@@ -18,8 +18,8 @@
 				var_dump($c['raceNom']);
 			?> -->
 			<div class="list-group-item">
-				<div class="container" data-toggle="collapse" data-target="#<?= $c['idString']; ?>">
-					<h5><?= $c['classeNom']; ?></h5>
+				<div class="container" >
+					<h5 class="titre-liste-classe"><?= $c['classeNom']; ?></h5><i class="fas fa-chevron-circle-right dropdown-list-class" data-toggle="collapse" data-target="#<?= $c['idString']; ?>"></i>
 				</div>
 				<div class="collapse informations" id="<?= $c['idString']; ?>">
 					<div class="info-description">

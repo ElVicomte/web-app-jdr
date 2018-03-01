@@ -4,8 +4,8 @@
 	require_once('Vue/Module.php');
 	require_once('Modele/Classe.php');
 	require_once('Modele/Race.php');
-	require('contenu/lib/formidable/autoload.php');
-	require('Controleur/ControleurEvenement.php');
+	require_once('contenu/lib/formidable/autoload.php');
+	require_once('Controleur/ControleurEvenement.php');
 
 
 
@@ -27,25 +27,25 @@
 		public function afficher(){
 
 			$races = $this->raceObjet->getRaces();
-			$classes = $this->classeObjet->getClasses('all');
 
 			$vue = new Vue('Ajouter une classe', 'vueAjouterClasse');
 
+			// formulaire CSV
 			$formCSV = new Gregwar\Formidable\Form('Vue/module/formulaireImportCSV.php');
 			$formCSV->setLanguage(new Gregwar\Formidable\Language\French);
 
+			// formulaire manuel
 			$formGeneral = new Gregwar\Formidable\Form('Vue/module/formulaireAjoutClasse.php', array('races' => $races));
 			$formGeneral->setLanguage(new Gregwar\Formidable\Language\French);
-			// $formGeneral->setValue('classe-nom', 'Oui');
-			// $formGeneral->setValue('classe-description', 'Oui.');
+
 
 			if(isset($_POST['ajouter-csv']) && $formCSV->posted()){
 				$errors = $formCSV->check();
 				if(empty($errors)){
 					$this->fichier = basename($_FILES['import-csv']['name']);
 					if($this->verifierFichier()){
-						$classes = $this->lireCSV();
-						foreach($classes as $classe){
+						$classeCSV = $this->lireCSV();
+						foreach($classeCSV as $classe){
 							$this->classeObjet->DBAjouterClasse($classe);
 						}
 						unlink('contenu/import/' . $this->fichier);
@@ -58,14 +58,14 @@
 					$this->classeObjet->DBAjouterClasse($formGeneral->getValues());
 					$this->event = $this->messageEvenement('success', 'La classe ? a été ajouté.', array($formGeneral->getValue('classe-nom')));				}
 				else{
-					$this->event = $this->messageEvenement('danger', 'Erreur');
+					$this->event = $this->messageEvenement('danger', 'Impossible d\'ajouter cette classe');
 				}
 			}
 			$classes = $this->classeObjet->getClasses('all');
 			$vue->generer(array("classes" => $classes, "formulaireGeneral" => $formGeneral, "formulaireCSV" => $formCSV, "evenement" => $this->event));
 		}
 
-		public function verifierFichier(){ // Vérifie la correspondance du fichier et retourne si l'upload s'est fait
+		public function verifierFichier(){ // Vérifie la correspondance du fichier et retourne si l'upload s'est effectué correctement
 			$fichierExtension = strtolower(pathinfo($this->fichier, PATHINFO_EXTENSION));
 			if($fichierExtension == "csv"){
 				if(move_uploaded_file($_FILES['import-csv']['tmp_name'], 'contenu/import/' . $this->fichier)){
