@@ -1,6 +1,6 @@
 <?php
 
-	require_once('db_connect/DBConnect.php');
+	require_once(BASE_PATH . 'db_connect/DBConnect.php');
 
 	class Classe extends DBConnect{
 

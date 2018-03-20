@@ -1,9 +1,9 @@
 <?php
 
-	require('ControleurAccueil.php');
-	require('ControleurFichePersonnage.php');
-	require('ControleurAjouterClasse.php');
-	require('ControleurAjouterRace.php');
+	require(BASE_PATH . 'Controleur/ControleurAccueil.php');
+	require(BASE_PATH . 'Controleur/ControleurFichePersonnage.php');
+	require(BASE_PATH . 'Controleur/ControleurAjouterClasse.php');
+	require(BASE_PATH . 'Controleur/ControleurAjouterRace.php');
 
 	class Routeur{
 
@@ -22,7 +22,7 @@
 		public function traiterRoute(){
 			try{
 				if(isset($_GET['page'])){
-					require('Controleur/Routes.php');
+					require(BASE_PATH . 'Controleur/Routes.php');
 				}
 				else{
 					$this->ctrlAccueil->afficher();
@@ -32,4 +32,4 @@
 				echo 'Chemin introuvable : ' . $e;
 			}
 		}
-	}	
+	}

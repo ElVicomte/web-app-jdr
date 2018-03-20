@@ -9,4 +9,8 @@
 		case 'ajouter-race':
 			$this->ctrlAjouterRace->afficher();
 			break;
+
+			default:
+				$this->ctrlAccueil->afficher();
+				break;
 	}

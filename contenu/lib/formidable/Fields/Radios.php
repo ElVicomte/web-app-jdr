@@ -18,7 +18,7 @@ class Radios extends Field
      * Is the value set ?
      */
     protected $valueSet = false;
-    
+
     public function __sleep()
     {
         return array_merge(parent::__sleep(), array(

@@ -10,13 +10,6 @@
 		<ul class="list-group">
 		<?php
 		foreach ($donnees["classes"] as $c) { ?>
-			<!-- <?php
-				var_dump($c['idString']);
-				var_dump($c['classeNom']);
-				var_dump($c['classeDescription']);
-				var_dump($c['sortNom']);
-				var_dump($c['raceNom']);
-			?> -->
 			<div class="list-group-item">
 				<div class="container" >
 					<h5 class="titre-liste-classe"><?= $c['classeNom']; ?></h5><i class="fas fa-chevron-circle-right dropdown-list-class" data-toggle="collapse" data-target="#<?= $c['idString']; ?>"></i>

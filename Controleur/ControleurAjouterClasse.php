@@ -1,11 +1,11 @@
 <?php
 
-	require_once('vue/Vue.php');
-	require_once('Vue/Module.php');
-	require_once('Modele/Classe.php');
-	require_once('Modele/Race.php');
-	require_once('contenu/lib/formidable/autoload.php');
-	require_once('Controleur/ControleurEvenement.php');
+	require_once(BASE_PATH . 'Vue/Vue.php');
+	require_once(BASE_PATH . 'Vue/Module.php');
+	require_once(BASE_PATH . 'Modele/Classe.php');
+	require_once(BASE_PATH . 'Modele/Race.php');
+	require_once(BASE_PATH . 'contenu/lib/formidable/autoload.php');
+	require_once(BASE_PATH . 'Controleur/ControleurEvenement.php');
 
 
 
@@ -56,7 +56,8 @@
 				$errors = $formGeneral->check();
 				if(empty($errors)){
 					$this->classeObjet->DBAjouterClasse($formGeneral->getValues());
-					$this->event = $this->messageEvenement('success', 'La classe ? a été ajouté.', array($formGeneral->getValue('classe-nom')));				}
+					$this->event = $this->messageEvenement('success', 'La classe ? a été ajouté.', array($formGeneral->getValue('classe-nom')));
+				}
 				else{
 					$this->event = $this->messageEvenement('danger', 'Impossible d\'ajouter cette classe');
 				}

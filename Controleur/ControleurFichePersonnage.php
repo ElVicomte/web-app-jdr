@@ -1,5 +1,5 @@
 <?php
-	require_once('vue/Vue.php');
+	require_once(BASE_PATH . 'Vue/Vue.php');
 
 	class ControleurFichePersonnage{
 
